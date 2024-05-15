@@ -9,14 +9,14 @@ contract HelloWorld {
 
     mapping(address => uint) public balances;
 
-  function mint (address _address, uint value) public  {
+  function mint (address address, uint value) public  {
     totalSupply += value;
-    balances[_address] += value;
+    balances[address] += value;
   }
-  function burn (address _address, uint value) public  {
-    if (balances[_address] >= value) {
+  function burn (address address, uint value) public  {
+    if (balances[address] >= value) {
       totalSupply -= value;
-      balances[_address] -= value;
+      balances[address] -= value;
     }
   }
   }
